@@ -1,0 +1,69 @@
+@media (min-width: 800px)
+{
+    body{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #container
+    {
+        display: flex;
+        height: 500px;
+        width: 500px;
+        background-color: green;
+        border: solid black 1px;
+    }
+    .square
+    {
+        flex: 1;
+        height: 100%;
+
+    }
+    .square:nth-child(2n){
+        border: solid blue 2px;
+    }
+    .square:nth-child(2n+1){
+        border: solid red 2px;
+
+    }
+    
+    
+}
+
+@media (max-width: 800px){
+    body{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-name: backgcol;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: absolute;
+    }
+    #container{
+        background-color: aqua;
+        width: 50%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    .square{
+        width: 100%;
+        flex: 1;
+        border: solid black 2px;
+    }
+    @keyframes backgcol {
+        0% {
+          background: yellow
+        }
+        50% {
+            background-color: white;
+        }
+        100% {
+          background: yellow;
+        }
+      }
+    
+}
